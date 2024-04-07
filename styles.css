@@ -11,8 +11,10 @@ body,
 }
 
 .header {
+  position: relative;
   width: 100vw;
   height: 94vh;
+  min-height: 340px;
   background-image: url("./images/header-bg-norm.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -80,7 +82,7 @@ marquee {
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 0px;
+  bottom: -6vh;
 }
 
 .circle {
@@ -159,42 +161,42 @@ marquee {
 }
 
 @media (max-height: 740px) {
-    .header-content {
-      margin-top: 50px;
-      gap: 30px;
-    }
-    .header-content > div p {
-      font-size: 50px !important;
-    }
-    .header-btns button {
-      height: 65px;
-    }
-    .header-btns a:last-child button {
-      background-color: #ffff !important;
-      margin-left: 0px;
-    }
-    .header-btns a:last-child button:hover {
-      background-color: #fbce51 !important;
-    }
-    .header-btns button p {
-      font-size: 18px !important;
-    }
-    .header-btns button p {
-      font-weight: normal;
-    }
+  .header-content {
+    margin-top: 50px;
+    gap: 25px;
   }
-  
+  .header-content > div > p {
+    font-size: 50px !important;
+  }
+  .header-btns button {
+    height: 65px;
+  }
+  .header-btns a:last-child button {
+    background-color: #ffff !important;
+    margin-left: 0px;
+  }
+  .header-btns a:last-child button:hover {
+    background-color: #fbce51 !important;
+  }
+  /* .header-btns button p {
+      font-size: 18px !important;
+    } */
+  .header-btns button p {
+    font-weight: normal;
+  }
+}
 
 @media (max-height: 600px) {
   .header-content {
-    margin-top: 40px;
-    gap: 15px;
+    /* width: 95vw; */
+    margin-top: 30px;
+    gap: 10px;
   }
   .header-content > div p {
     font-size: 28px !important;
   }
   .header-btns button {
-    height: 60px;
+    height: 58px;
   }
   .header-btns a:last-child button {
     background-color: #ffff !important;
@@ -208,5 +210,11 @@ marquee {
   }
   .header-btns button p {
     font-weight: normal;
+  }
+  marquee {
+    bottom: 0px;
+  }
+  .header {
+    height: 100vh;
   }
 }
