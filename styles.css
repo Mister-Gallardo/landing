@@ -20,19 +20,22 @@ body, * {
 
 .header-content {
     width: 542px;
-    /* height: 444px; */
     margin-top: 60px;
+    display: flex;
+    flex-direction: column; 
+    gap: 40px
 }
 
-.header-content button {
+.header-btns button {
     padding: 10px;
     border-radius: 50px;
     border: 2px solid #1F1F1F;
     width: calc(50% - 10px); 
     height: 72px;
+    opacity: 0.96;
 }
 
-.header-content a:first-child button {
+.header-btns a:first-child button {
     background-color: #1F1F1F;
     color: #FFFF;
     font-size: 16px;
@@ -41,7 +44,7 @@ body, * {
     transition-duration: 0.2s;
 }
 
-.header-content a:last-child button {
+.header-btns a:last-child button {
     background-color: transparent;
     margin-left: 11px;
     color: #1F1F1F;
@@ -51,7 +54,7 @@ body, * {
     transition-duration: 0.2s;
 }
 
-.header-content a:first-child button:hover {
+.header-btns a:first-child button:hover {
     cursor: pointer;
     border: 0px;
     background-color: #FBCE51;
@@ -59,7 +62,7 @@ body, * {
     transition-duration: 0.2s;
 }
 
-.header-content a:last-child button:hover {
+.header-btns a:last-child button:hover {
     cursor: pointer;
     border: 0px;
     background-color: #1F1F1F;
@@ -95,8 +98,53 @@ marquee {
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 640px) {
     .header {
         background-image: url('./images/header-bg-sm.webp');
+    }
+    .container > div {
+        width: 100% !important;
+    }
+    .header-content > div:nth-child(1) p {
+        font-size: 36px !important;
+    }
+    .header-content {
+        width: 335px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header-btns {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-btns a {
+        width: 100%;
+    }
+    .header-btns button, .header-btns button p  {
+        width: 100% !important;
+        height: 47px;
+    }
+    .header-btns a:last-child button {
+        background-color: #FFFF !important;
+        margin-left: 0px;
+    }
+    .header-btns a:last-child button:hover {
+        background-color: #FBCE51 !important;
+
+    }
+}
+
+@media (max-width: 360px) {
+    .header {
+        background-image: url('./images/header-bg-sm.webp');
+    }
+    .header-content > div:nth-child(1) p {
+        font-size: 32px !important;
+    }
+    .header-content {
+        width: 300px;
     }
 }
