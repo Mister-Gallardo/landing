@@ -183,6 +183,7 @@ marquee {
     } */
   .header-btns button p {
     font-weight: normal;
+    margin-top: 10px !important;
   }
 }
 
