@@ -1,86 +1,86 @@
-body, * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+body,
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 .container {
-    width: 90vw;
-    margin: 0px auto;
+  width: 90vw;
+  margin: 0px auto;
 }
 
 .header {
-    width: 100vw;
-    height: 94vh;
-    background-image: url('./images/header-bg-norm.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  width: 100vw;
+  height: 94vh;
+  background-image: url("./images/header-bg-norm.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .header-content {
-    width: 542px;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column; 
-    gap: 40px
+  width: 542px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .header-btns button {
-    padding: 10px;
-    border-radius: 50px;
-    border: 2px solid #1F1F1F;
-    width: calc(50% - 10px); 
-    height: 72px;
-    opacity: 0.96;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px solid #1f1f1f;
+  width: calc(50% - 10px);
+  height: 72px;
+  opacity: 0.96;
 }
 
 .header-btns a:first-child button {
-    background-color: #1F1F1F;
-    color: #FFFF;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: bold;
-    transition-duration: 0.2s;
+  background-color: #1f1f1f;
+  color: #ffff;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition-duration: 0.2s;
 }
 
 .header-btns a:last-child button {
-    background-color: transparent;
-    margin-left: 11px;
-    color: #1F1F1F;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: bold;
-    transition-duration: 0.2s;
+  background-color: transparent;
+  margin-left: 11px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  transition-duration: 0.2s;
 }
 
 .header-btns a:first-child button:hover {
-    cursor: pointer;
-    border: 0px;
-    background-color: #FBCE51;
-    color: #1F1F1F;
-    transition-duration: 0.2s;
+  cursor: pointer;
+  border: 0px;
+  background-color: #fbce51;
+  color: #1f1f1f;
+  transition-duration: 0.2s;
 }
 
 .header-btns a:last-child button:hover {
-    cursor: pointer;
-    border: 0px;
-    background-color: #1F1F1F;
-    color: #FFFF;
-    transition-duration: 0.2s;
+  cursor: pointer;
+  border: 0px;
+  background-color: #1f1f1f;
+  color: #ffff;
+  transition-duration: 0.2s;
 }
 
 marquee {
-    background-color: #F54932;
-    color: white;
-    font-size: 22px;
-    padding: 10px;
-    height: 6vh;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0px;
+  background-color: #f54932;
+  color: white;
+  font-size: 22px;
+  padding: 10px;
+  height: 6vh;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
 }
 
 .circle {
@@ -93,58 +93,120 @@ marquee {
 }
 
 @media (min-width: 1520px) {
-    .header {
-        background-image: url('./images/header-bg-big.webp');
-    }
+  .header {
+    background-image: url("./images/header-bg-big.webp");
+  }
 }
 
+@media (max-width: 1220px) {
+  .header-btns a:last-child button {
+    background-color: #ffff !important;
+    margin-left: 0px;
+  }
+  .header-btns a:last-child button:hover {
+    background-color: #fbce51 !important;
+  }
+}
 @media (max-width: 640px) {
-    .header {
-        background-image: url('./images/header-bg-sm.webp');
-    }
-    .container > div {
-        width: 100% !important;
-    }
-    .header-content > div:nth-child(1) p {
-        font-size: 36px !important;
-    }
-    .header-content {
-        width: 335px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .header-btns {
-        display: flex;
-        gap: 15px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .header-btns a {
-        width: 100%;
-    }
-    .header-btns button, .header-btns button p  {
-        width: 100% !important;
-        height: 47px;
-    }
-    .header-btns a:last-child button {
-        background-color: #FFFF !important;
-        margin-left: 0px;
-    }
-    .header-btns a:last-child button:hover {
-        background-color: #FBCE51 !important;
-
-    }
+  .header {
+    background-image: url("./images/header-bg-sm.webp");
+  }
+  .container > div {
+    width: 100% !important;
+  }
+  .header-content > div:nth-child(1) p {
+    font-size: 36px !important;
+  }
+  .header-content {
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header-btns {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-btns a {
+    width: 100%;
+  }
+  .header-btns button,
+  .header-btns button p {
+    width: 100% !important;
+    height: 47px;
+  }
+  .header-btns a:last-child button {
+    background-color: #ffff !important;
+    margin-left: 0px;
+  }
+  .header-btns a:last-child button:hover {
+    background-color: #fbce51 !important;
+  }
 }
 
 @media (max-width: 360px) {
-    .header {
-        background-image: url('./images/header-bg-sm.webp');
-    }
-    .header-content > div:nth-child(1) p {
-        font-size: 32px !important;
-    }
+  .header {
+    background-image: url("./images/header-bg-sm.webp");
+  }
+  .header-content > div:nth-child(1) p {
+    font-size: 32px !important;
+  }
+  .header-content {
+    width: 300px;
+  }
+}
+
+@media (max-height: 740px) {
     .header-content {
-        width: 300px;
+      margin-top: 50px;
+      gap: 30px;
     }
+    .header-content > div p {
+      font-size: 50px !important;
+    }
+    .header-btns button {
+      height: 65px;
+    }
+    .header-btns a:last-child button {
+      background-color: #ffff !important;
+      margin-left: 0px;
+    }
+    .header-btns a:last-child button:hover {
+      background-color: #fbce51 !important;
+    }
+    .header-btns button p {
+      font-size: 18px !important;
+    }
+    .header-btns button p {
+      font-weight: normal;
+    }
+  }
+  
+
+@media (max-height: 600px) {
+  .header-content {
+    margin-top: 40px;
+    gap: 15px;
+  }
+  .header-content > div p {
+    font-size: 28px !important;
+  }
+  .header-btns button {
+    height: 60px;
+  }
+  .header-btns a:last-child button {
+    background-color: #ffff !important;
+    margin-left: 0px;
+  }
+  .header-btns a:last-child button:hover {
+    background-color: #fbce51 !important;
+  }
+  .header-btns button p {
+    font-size: 18px !important;
+  }
+  .header-btns button p {
+    font-weight: normal;
+  }
 }
