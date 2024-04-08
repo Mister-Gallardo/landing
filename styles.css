@@ -126,7 +126,7 @@ marquee {
   height: 527px;
 }
 
-.support-prices > div > p {
+.support-prices > div > p:first-child {
   font-size: 36px;
   text-transform: uppercase;
 }
@@ -139,7 +139,7 @@ marquee {
   gap: 30px;
 }
 
-.support-prices a {
+.support-prices p:last-child {
   font-size: 20px;
   text-decoration: none;
   color: #3057A2;
@@ -150,7 +150,7 @@ marquee {
   border: none;
 }
 
-.support-prices table:nth-child(4) {
+.support-prices table:nth-child(3) {
   display: none;
 }
 
@@ -179,7 +179,6 @@ marquee {
   font-size: 20px;
   font-weight: bold;
 }
-
 
 @media (min-width: 1520px) {
   .header {
@@ -263,8 +262,11 @@ marquee {
   .support-lection img:nth-child(2) {
     width: 335px;
   }
-  .support-prices > div p {
+  .support-prices > div p:first-child {
     font-size: 28px;
+  }
+  .support-prices p:last-child {
+    font-size: 18px;
   }
   .support-prices img {
     width: 335px;
