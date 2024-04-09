@@ -53,3 +53,49 @@ buttonPrev.addEventListener("click", () => {
     buttonNext.disabled = false;
   }
 });
+
+
+let currentMembers = 0;
+const members = document.querySelector('.members_desktop')
+const members_desktop = document.querySelectorAll('#members_desktop')
+const number = document.querySelector('.number_desk');
+
+function showMembers() {
+  members.children[currentMembers].style.display = 'none';
+  currentMembers = (currentMembers + 1) % 2;
+  members.children[currentMembers].style.display = 'flex';
+
+  number.innerHTML = currentMembers * 3 + 3;
+}
+
+members_desktop[0].addEventListener('click', showMembers)
+members_desktop[1].addEventListener('click', showMembers)
+
+setInterval(showMembers, 4000)
+
+
+let currentMember = 0;
+const members_mobile = document.querySelectorAll(".member_mobile");
+const buttonPrev_mobile = document.querySelector('#members_prev_mobile');
+const buttonNext_mobile = document.querySelector('#members_next_mobile');
+const number_mobile = document.querySelector('.number_mobile');
+
+console.log(members_mobile)
+
+function showMember(index = ++currentMember) {
+  index = index % 6;
+
+  number_mobile.innerHTML = index+1;
+  
+  members_mobile.forEach((member) => {
+    member.style.display = 'none';
+    
+  });
+
+  members_mobile[index].style.display = 'flex';
+}
+
+buttonPrev_mobile.addEventListener('click', () => showMember(--currentMember))
+buttonNext_mobile.addEventListener('click', () => showMember(++currentMember))
+
+setInterval(showMember, 4000)
